@@ -225,7 +225,7 @@ elif st.session_state.page == "investment_selection":
                 st.write(f"{item[0]} - Modal: {item[1]}, Expected Return: {item[2]}")
         elif Algorithm == "**01** With Greedy":
             max_profit, recommended_stocks = greedy_01_knapsack(capacity, weights, values, names)
-            st.subheader("Keuntungan Maksimum:", round(max_profit))
+            st.subheader("Keuntungan Maksimum:" round(max_profit))
             st.write("Detail Saham yang Dipilih:")
             for item in recommended_stocks:
                 st.write(f"{item[0]} - Modal: {item[1]}, Expected Return: {item[2]}")
