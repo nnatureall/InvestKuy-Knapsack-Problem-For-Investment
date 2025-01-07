@@ -219,13 +219,13 @@ elif st.session_state.page == "investment_selection":
                 st.write("Tidak ada kombinasi saham yang sesuai dengan modal Anda.")
         elif Algorithm == "**01** With Dynamic Programming":
             max_profit, recommended_stocks = knapsack_01_dp(weights, values, capacity)
-            st.subheader("Keuntungan Maksimum:", round(max_profit))
+            st.subheader(f"Keuntungan Maksimum: {round(max_profit)}")
             st.write("Rekomendasi Saham yang Dibeli:")
             for item in recommended_stocks:
                 st.write(f"{item[0]} - Modal: {item[1]}, Expected Return: {item[2]}")
         elif Algorithm == "**01** With Greedy":
             max_profit, recommended_stocks = greedy_01_knapsack(capacity, weights, values, names)
-            st.subheader("Keuntungan Maksimum:" round(max_profit))
+            st.subheader(f"Keuntungan Maksimum: {round(max_profit)}")
             st.write("Detail Saham yang Dipilih:")
             for item in recommended_stocks:
                 st.write(f"{item[0]} - Modal: {item[1]}, Expected Return: {item[2]}")
